@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORBITAL Lost Signal</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="shell">
+
+  <header class="masthead">
+    <div class="ident">
+      <span class="ident__glyph">&#9672;</span>
+      <div class="ident__stack">
+        <span class="ident__code">SUBSTRATE&#8209;7</span>
+        <span class="ident__sub">ORBITAL RELAY / DEEP RANGE CONTROL</span>
+      </div>
+    </div>
+    <ul class="rail">
+      <li class="rail__item is-lit">UPLINK</li>
+      <li class="rail__item">RELAY</li>
+      <li class="rail__item">ARCHIVE</li>
+      <li class="rail__item is-locked">DIAGNOSTIC</li>
+    </ul>
+  </header>
+
+  <div class="deck">
+
+    <section class="scope">
+      <div class="scope__top"><span>TRACKING ARRAY</span><b>AZ 041.7 / EL -12.4</b></div>
+      <div class="scope__dial">
+        <div class="scope__sweep"></div>
+        <div class="scope__web"></div>
+        <div class="scope__orbit"></div>
+        <div class="scope__sat"></div>
+      </div>
+      <canvas id="trace" class="scope__trace"></canvas>
+      <div class="scope__bearing">
+        <span>000</span><span>090</span><span>180</span><span>270</span>
+      </div>
+      <div class="scope__readout">
+        <span class="scope__cell">CARRIER<b id="carrier">NO CARRIER</b></span>
+        <span class="scope__cell">GAIN<b id="gain">0.00</b></span>
+        <span class="scope__cell">DRIFT<b id="drift">+0.0 kHz</b></span>
+      </div>
+    </section>
+
+    <section class="chassis">
+      <span class="corner corner--tl"></span>
+      <span class="corner corner--tr"></span>
+      <span class="corner corner--bl"></span>
+      <span class="corner corner--br"></span>
+
+      <p class="stamp"> &nbsp;&nbsp; WEB EXPLOITATION &nbsp;&nbsp;</p>
+      <h1 class="title" data-text="ORBITAL // LOST SIGNAL">ORBITAL LOST SIGNAL</h1>
+
+      <p class="brief">A damaged satellite&#8209;control interface is still accepting a mission identifier. A hidden diagnostic console contains the recovered transmission.</p>
+
+      <p class="whisper">The recovery software was written for old browsers and trusts the DOM&#8217;s named&#8209;property behavior. Can you make the page believe diagnostic mode is active?</p>
+
+      <form id="missionForm" class="bay" autocomplete="off">
+        <label class="bay__label" for="mission">MISSION IDENTIFIER</label>
+        <div class="bay__row">
+          <input id="mission" name="mission" type="text" placeholder="Enter mission ID" spellcheck="false">
+          <button type="submit">CONNECT</button>
+        </div>
+        <div class="bay__meter"><i id="fill"></i></div>
+        <p class="bay__note">payload window &middot; 200 chars &middot; legacy parser accepted</p>
+      </form>
+    </section>
+
+  </div>
+
+  <section class="crt">
+    <div class="crt__head">
+      <span class="crt__title">RECEIVED TRANSMISSION</span>
+      <span class="crt__state" id="crtState">IDLE</span>
+    </div>
+    <div id="output">Waiting for mission signal...</div>
+    <p class="receipt" id="receipt">CHANNEL 7 DECRYPTED &mdash; RECOVERED TRANSMISSION PRINTED TO CONSOLE</p>
+  </section>
+
+  <footer class="ticker">
+    <div class="ticker__track">
+      <span>ORBITAL RELAY NODE 07 &nbsp;///&nbsp; CARRIER ACQUIRED &nbsp;///&nbsp; DOPPLER SHIFT -3.2 kHz &nbsp;///&nbsp; DOWNLINK WINDOW 04:12 UTC &nbsp;///&nbsp; GROUND STATION KESTREL ONLINE &nbsp;///&nbsp; ARCHIVE 41 FILES PENDING &nbsp;///&nbsp; DIAGNOSTIC CHANNEL SEALED &nbsp;///&nbsp;&nbsp;</span>
+      <span>ORBITAL RELAY NODE 07 &nbsp;///&nbsp; CARRIER ACQUIRED &nbsp;///&nbsp; DOPPLER SHIFT -3.2 kHz &nbsp;///&nbsp; DOWNLINK WINDOW 04:12 UTC &nbsp;///&nbsp; GROUND STATION KESTREL ONLINE &nbsp;///&nbsp; ARCHIVE 41 FILES PENDING &nbsp;///&nbsp; DIAGNOSTIC CHANNEL SEALED &nbsp;///&nbsp;&nbsp;</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
